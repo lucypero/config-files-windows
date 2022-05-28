@@ -1,0 +1,7 @@
+[user]
+	name = lucy
+	email = lucyperopero@gmail.com
+[credential "helperselector"]
+	selected = manager-core
+[init]
+	defaultBranch = main
