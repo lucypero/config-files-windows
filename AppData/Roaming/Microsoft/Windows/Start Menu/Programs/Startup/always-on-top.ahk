@@ -1,0 +1,1 @@
+﻿^Numpad1::  Winset, Alwaysontop, , A

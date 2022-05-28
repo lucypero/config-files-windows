@@ -1,0 +1,11 @@
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+set promptfmt " %w/%f"
+set ratios 1:1
+set shell pwsh
+
+cmd open ${{
+    of $env:f
+}}
