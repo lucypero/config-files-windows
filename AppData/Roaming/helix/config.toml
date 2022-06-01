@@ -1,11 +1,11 @@
-theme = "onedark"
+theme = "lucytheme"
 
 [editor]
 scrolloff = 8
 line-number = "relative"
+auto-format = false
 
 [keys.normal]
-C-A-f = ":format"
 "semicolon" = "command_mode"
 ":" = "collapse_selection"
 0 = "goto_line_start"
@@ -13,7 +13,7 @@ C-A-f = ":format"
 D = ["collapse_selection", "extend_to_line_end", "delete_selection"]
 C = ["collapse_selection", "extend_to_line_end", "change_selection"]
 C-q = ":q"
-"minus" = { s = ":w", w = "rotate_view", v = "vsplit" }
+"minus" = { s = ":w", w = "rotate_view", v = "vsplit", f = ":format" }
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
 
