@@ -1,0 +1,17 @@
+set clipboard+=unnamed
+set visualbell
+set noerrorbells
+let mapleader = "-"
+nn <leader>w <C-w><C-w>
+nn <leader>s :w <cr>
+nn <leader>S :wa <cr>
+nn <leader>1 <C-^>
+nn <leader><F3> :e ~\.ideavimrc<CR>
+nn <Tab> :bn<cr>
+nn <S-Tab> :bp<cr>
+nn : ;
+nn ; :
+nmap <leader>e <action>(ShowErrorDescription)
+nmap <leader>] <action>(GotoNextError)
+nmap <leader>o <action>(GotoFile)
+nmap <leader>r <action>(GotoSymbol)
