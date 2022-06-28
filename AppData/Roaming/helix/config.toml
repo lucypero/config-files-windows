@@ -1,4 +1,4 @@
-theme = "lucytheme"
+theme = "monokai_pro"
 
 [editor]
 scrolloff = 8
@@ -6,7 +6,7 @@ line-number = "relative"
 auto-format = false
 
 [keys.normal]
-"semicolon" = "command_mode"
+";" = "command_mode"
 ":" = "collapse_selection"
 0 = "goto_line_start"
 "$" = "goto_line_end"

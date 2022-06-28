@@ -1,6 +1,8 @@
 set clipboard+=unnamed
 set visualbell
 set noerrorbells
+set ignorecase
+set smartcase
 let mapleader = "-"
 nn <leader>w <C-w><C-w>
 nn <leader>s :w <cr>
@@ -11,7 +13,10 @@ nn <Tab> :bn<cr>
 nn <S-Tab> :bp<cr>
 nn : ;
 nn ; :
+
+-- :actionlist to view all actions
 nmap <leader>e <action>(ShowErrorDescription)
 nmap <leader>] <action>(GotoNextError)
 nmap <leader>o <action>(GotoFile)
 nmap <leader>r <action>(GotoSymbol)
+nmap <leader>f <action>(ReformatCode)

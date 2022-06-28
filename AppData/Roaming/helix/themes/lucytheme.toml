@@ -44,7 +44,7 @@ diagnostic = { modifiers = ["underlined"] }
 "warning" = { fg = "yellow", modifiers = ["bold"] }
 "error" = { fg = "red", modifiers = ["bold"] }
 
-"ui.background" = {}
+"ui.background" = { bg =  black }
 "ui.virtual.whitespace" = { fg = "light-gray" }
 "ui.virtual.ruler" = { bg = "gray" }
 
