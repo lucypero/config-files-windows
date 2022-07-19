@@ -7,7 +7,7 @@ function EditHelixConfig {hx $env:appdata\helix\config.toml}
 function EditBookmarks {hx ~\docs\bookmarks}
 function EditPowershellProfile {hx $profile}
 function GoToBookmark {
-    $dir = Get-Content ~\docs\bookmarks | Invoke-Fzf
+    $dir = Get-Content ~\docs\bookmarks | fzf
     Set-Location $dir
 }
 function AddToBookmarks {
@@ -18,14 +18,15 @@ function LaunchGodotEditor {
     Start-Process  C:\Users\Lucy\dev\lone_wolf_tech\godots\godot-3.4\bin\godot.windows.opt.tools.64.exe
 }
 function LaunchFavoriteProgram {
-    $program = Get-Content ~\docs\fav-programs | Invoke-Fzf
+    $program = Get-Content ~\docs\fav-programs | fzf
     Start-Process $program
 }
 function CallExplorer {
     explorer .
 }
 function OpenHelixSession {
-    $the_session = cat (ls ~\docs\sessions | Invoke-Fzf)
+    Set-Location ~\docs\sessions
+    $the_session = cat (Get-ChildItem ~\docs\sessions | Select -Exp Name | fzf)
     $cwd = echo $the_session | Select-Object -First 1
     Set-Location $cwd
     $hx_args = (($the_session -split '\r?\n').Trim() | Select-Object -Skip 2) -Join ' '
@@ -59,3 +60,8 @@ Set-Alias en OpenNotesSession
 Set-Alias config ConfigGit
 Set-Alias lg lazygit
 Set-Alias clg LazyGitConfig
+
+Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
+    lfcd
+    [Microsoft.PowerShell.PSConsoleReadLine]::InvokePrompt()
+}

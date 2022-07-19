@@ -3,9 +3,8 @@ set visualbell
 set noerrorbells
 set ignorecase
 set smartcase
-let mapleader = "-"
+let mapleader = " "
 nn <leader>w <C-w><C-w>
-nn <leader>s :w <cr>
 nn <leader>S :wa <cr>
 nn <leader>1 <C-^>
 nn <leader><F3> :e ~\.ideavimrc<CR>
@@ -13,10 +12,16 @@ nn <Tab> :bn<cr>
 nn <S-Tab> :bp<cr>
 nn : ;
 nn ; :
+nn <leader>v <c-w>v
 
 -- :actionlist to view all actions
-nmap <leader>e <action>(ShowErrorDescription)
+nmap gr <action>(ShowUsages)
+nmap <leader>k <action>(ShowErrorDescription)
 nmap <leader>] <action>(GotoNextError)
 nmap <leader>o <action>(GotoFile)
-nmap <leader>r <action>(GotoSymbol)
+nmap <leader>s <action>(FileStructurePopup)
+nmap <leader>S <action>(GotoSymbol)
 nmap <leader>f <action>(ReformatCode)
+nmap <leader>r <action>(RenameElement)
+nmap <leader>p <action>(OpenEditorInOppositeTabGroup)
+nmap <leader>P <action>(MoveEditorToOppositeTabGroup)
