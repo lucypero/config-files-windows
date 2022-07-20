@@ -89,3 +89,7 @@ Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
     lfcd
     [Microsoft.PowerShell.PSConsoleReadLine]::InvokePrompt()
 }
+
+### Fzf colors
+
+$env:FZF_DEFAULT_OPTS = '--color=hl:#ffb8f6,fg+:-1,hl+:#ffb8f6,info:#ffb8f6,prompt:#ffb8f6,pointer:#ff91f0,marker:-1,spinner:#ffb8f6,header:#ffb8f6,bg:-1,bg+:-1'
