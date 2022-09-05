@@ -1,0 +1,30 @@
+set clipboard+=unnamed
+set visualbell
+set noerrorbells
+set ignorecase
+set smartcase
+set scrolloff=10
+let mapleader = " "
+nn <leader>w <C-w><C-w>
+nn <leader>S :wa <cr>
+nn <leader>1 <C-^>
+nn <leader><F3> :e ~\.ideavimrc<CR>
+nn <Tab> :bn<cr>
+nn <S-Tab> :bp<cr>
+nn : ;
+nn ; :
+vn : ;
+vn ; :
+nn <leader>v <c-w>v
+
+" :actionlist to view all actions
+nmap gr <action>(ShowUsages)
+nmap <leader>k <action>(QuickJavaDoc)
+nmap <leader>] <action>(GotoNextError)
+nmap <leader>o <action>(GotoFile)
+nmap <leader>s <action>(FileStructurePopup)
+nmap <leader>S <action>(GotoSymbol)
+nmap <leader>f <action>(ReformatCode)
+nmap <leader>r <action>(RenameElement)
+nmap <leader>p <action>(OpenEditorInOppositeTabGroup)
+nmap <leader>P <action>(MoveEditorToOppositeTabGroup)

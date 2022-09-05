@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"GDScript (Godot Engine)",
+		"LSP",
+		"LSP-pylsp",
+		"Materialize",
+		"NeoVintageous",
+		"One Dark Material - Theme",
+		"Origami",
+		"Package Control",
+		"Theme - Interstellar",
+		"Theme - Spacegray",
+	],
+}

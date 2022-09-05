@@ -1,0 +1,24 @@
+theme = "catppuccin_mocha"
+
+[editor]
+scrolloff = 8
+line-number = "relative"
+auto-format = false
+
+[keys.normal]
+";" = "command_mode"
+":" = "collapse_selection"
+0 = "goto_line_start"
+"$" = "goto_line_end"
+#D = ["collapse_selection", "extend_to_line_end", "delete_selection"]
+#C = ["collapse_selection", "extend_to_line_end", "change_selection"]
+C-q = ":q"
+"minus" = { s = ":w", w = "rotate_view", v = "vsplit", f = ":format" }
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+[keys.select]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+0 = "goto_line_start"
+"$" = "goto_line_end"

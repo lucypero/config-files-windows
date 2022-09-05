@@ -1,0 +1,18 @@
+{
+	"clients":
+	{
+		"rust-analyzer":
+		{
+			"enabled": true,
+		},
+		"gdscript":
+		{
+			"enabled": true,
+			"command": ["C:\\Users\\Lucy\\dev\\lone_wolf_tech\\godots\\godot-3.4\\bin\\godot.windows.opt.tools.64.exe"],
+			"tcp_port": 6008, 
+			"selector": "source.gdscript",
+		},
+	},
+	"show_diagnostics_panel_on_save": 0,
+  "show_diagnostics_count_in_view_status": true,
+}

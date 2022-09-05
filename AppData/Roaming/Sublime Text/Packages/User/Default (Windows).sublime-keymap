@@ -1,0 +1,61 @@
+[
+  {
+    "keys": [
+      "ctrl+n"
+    ],
+    "command": "move",
+    "args": {
+      "by": "lines",
+      "forward": true
+    },
+    "context": [
+      {
+        "key": "overlay_visible",
+        "operator": "equal",
+        "operand": true
+      },
+      {
+        "key": "panel_has_focus",
+        "operator": "equal",
+        "operand": false
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+p"
+    ],
+    "command": "move",
+    "args": {
+      "by": "lines",
+      "forward": false
+    },
+    "context": [
+      {
+        "key": "overlay_visible",
+        "operator": "equal",
+        "operand": true
+      },
+      {
+        "key": "panel_has_focus",
+        "operator": "equal",
+        "operand": false
+      }
+    ]
+  },
+  {
+    "command": "lsp_goto_diagnostic",
+    "args": {
+      "uri": "$view_uri"
+    },
+    "keys": [
+      "f8"
+    ],
+  },
+  {
+    "command": "lsp_goto_diagnostic",
+    "keys": [
+      "shift+f8"
+    ],
+  },
+]

@@ -1,0 +1,27 @@
+" Type :help nv for help.
+set ignorecase
+set smartcase
+
+let mapleader=<space>
+
+nnoremap : ;
+nnoremap ; :
+vnoremap : ;
+vnoremap ; :
+
+nnoremap <leader>[ :PrevResult<cr>
+nnoremap <leader>] :NextResult<cr>
+
+nnoremap <leader>w :FocusNeighboringGroup<cr>
+nnoremap <leader>v :vsplit<cr>
+
+" LSP stuff
+nnoremap <leader>e :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>s :LspDocumentSymbols<cr>
+nnoremap <leader>r :LspSymbolRename<cr>
+nnoremap <leader>d :LspGotoDiagnostic "uri=$view_uri"<cr>
+nnoremap <leader>f :LspFormatDocument<cr>
+nnoremap <leader>a :LspCodeActions<cr>
+nnoremap gd :LspSymbolDefinition<cr>
+nnoremap gr :LspSymbolReferences<cr>
+
