@@ -2,6 +2,7 @@
 
 alias e = subl
 alias f = cd (open --raw ~\docs\bookmarks | fzf)
+alias ba = (echo $env.PWD | save ~\docs\bookmarks --append)
 alias c = cargo
 
 alias gc = cd $"($env.PREX_PATH)\\cipher"
@@ -9,7 +10,10 @@ alias ga = cd $"($env.PREX_PATH)\\api"
 alias gg = cd $"($env.PREX_PATH)"
 alias gcc = cd $"($env.PREX_PATH)\\core"
 alias gl = cd $"($env.PREX_PATH)\\logger"
+alias gp = cd $"($env.PREX_PATH)\\push_handler"
+alias gt = cd $"($env.PREX_PATH)\\testing"
 
+# editing configurations
 alias ece = subl $nu.env-path
 alias ecn = subl $nu.config-path
 alias ecw = subl ~\.wezterm.lua
@@ -24,8 +28,9 @@ alias config = git $"--git-dir=($env.USERPROFILE)/.cfg/" $"--work-tree=($env.USE
 alias lg = lazygit
 alias lconfig = lazygit $"--git-dir=($env.USERPROFILE)/.cfg/" $"--work-tree=($env.USERPROFILE)"
 
-# for more information on themes see
-# https://www.nushell.sh/book/coloring_and_theming.html
+let lucy_white = "#ffffff"
+let lucy_error = { fg: "#FFFFFF" bg: "#FF0000" attr: b}
+
 let dark_theme = {
     # color for nushell primitives
     separator: white
@@ -50,54 +55,54 @@ let dark_theme = {
     hints: dark_gray
 
     # shapes are used to change the cli syntax highlighting
-    shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: b}
-    shape_binary: purple_bold
-    shape_bool: light_cyan
-    shape_int: purple_bold
-    shape_float: purple_bold
-    shape_range: yellow_bold
-    shape_internalcall: cyan_bold
-    shape_external: cyan
-    shape_externalarg: green_bold
-    shape_literal: blue
-    shape_operator: yellow
-    shape_signature: green_bold
-    shape_string: green
-    shape_string_interpolation: cyan_bold
-    shape_datetime: cyan_bold
-    shape_list: cyan_bold
-    shape_table: blue_bold
-    shape_record: cyan_bold
-    shape_block: blue_bold
-    shape_filepath: cyan
-    shape_globpattern: cyan_bold
-    shape_variable: purple
-    shape_flag: blue_bold
-    shape_custom: green
-    shape_nothing: light_cyan
+    shape_garbage: $lucy_error
+    shape_binary: $lucy_white
+    shape_bool: $lucy_white
+    shape_int: $lucy_white
+    shape_float: $lucy_white
+    shape_range: $lucy_white
+    shape_internalcall: $lucy_white
+    shape_external: $lucy_white
+    shape_externalarg: $lucy_white
+    shape_literal: $lucy_white
+    shape_operator: $lucy_white
+    shape_signature: $lucy_white
+    shape_string: $lucy_white
+    shape_string_interpolation: $lucy_white
+    shape_datetime: $lucy_white
+    shape_list: $lucy_white
+    shape_table: $lucy_white
+    shape_record: $lucy_white
+    shape_block: $lucy_white
+    shape_filepath: $lucy_white
+    shape_globpattern: $lucy_white
+    shape_variable: $lucy_white
+    shape_flag: $lucy_white
+    shape_custom: $lucy_white
+    shape_nothing: $lucy_white
 }
 
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   filesize_metric: false
-  table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+  table_mode: rounded
   use_ls_colors: true
   rm_always_trash: false
-  color_config: $dark_theme   # if you want a light theme, replace `$dark_theme` to `$light_theme`
+  color_config: $dark_theme
   use_grid_icons: true
   footer_mode: "25" # always, never, number_of_rows, auto
   quick_completions: true  # set this to false to prevent auto-selecting completions when only one remains
   partial_completions: true  # set this to false to prevent partial filling of the prompt
   completion_algorithm: "prefix"  # prefix, fuzzy
   float_precision: 2
-  # buffer_editor: "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
+  buffer_editor: "nvim"
   use_ansi_coloring: true
   filesize_format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
-  edit_mode: vi # emacs, vi
-  max_history_size: 10000 # Session has to be reloaded for this to take effect
-  sync_history_on_enter: true # Enable to share the history between multiple sessions, else you have to close the session to persist history to file
+  edit_mode: vi
+  max_history_size: 10000
+  sync_history_on_enter: true
   history_file_format: "plaintext" # "sqlite" or "plaintext"
-  shell_integration: false # enables terminal markers and a workaround to arrow keys stop working issue
+  shell_integration: true
   disable_table_indexes: false # set to true to remove the index column from tables
   cd_with_abbreviations: false # set to true to allow you to do things like cd s/o/f and nushell expand it to cd some/other/folder
   case_sensitive_completions: false # set to true to enable case-sensitive completions

@@ -43,6 +43,7 @@
       }
     ]
   },
+  { "keys": ["ctrl+q"], "command": "close_file" },
   {
     "command": "lsp_goto_diagnostic",
     "args": {
@@ -58,4 +59,6 @@
       "shift+f8"
     ],
   },
+  { "keys": ["ctrl+]"], "command": "next_result" },
+  { "keys": ["ctrl+["], "command": "prev_result" },
 ]

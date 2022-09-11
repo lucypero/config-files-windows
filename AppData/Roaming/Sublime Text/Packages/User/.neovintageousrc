@@ -1,6 +1,7 @@
 " Type :help nv for help.
 set ignorecase
 set smartcase
+set winaltkeys=yes
 
 let mapleader=<space>
 
@@ -14,6 +15,7 @@ nnoremap <leader>] :NextResult<cr>
 
 nnoremap <leader>w :FocusNeighboringGroup<cr>
 nnoremap <leader>v :vsplit<cr>
+nnoremap <leader>P :PromptSelectWorkspace<cr>
 
 " LSP stuff
 nnoremap <leader>e :ShowOverlay overlay=goto text=@<CR>
@@ -22,6 +24,6 @@ nnoremap <leader>r :LspSymbolRename<cr>
 nnoremap <leader>d :LspGotoDiagnostic "uri=$view_uri"<cr>
 nnoremap <leader>f :LspFormatDocument<cr>
 nnoremap <leader>a :LspCodeActions<cr>
+nnoremap <leader>k :LspHover<cr>
 nnoremap gd :LspSymbolDefinition<cr>
 nnoremap gr :LspSymbolReferences<cr>
-

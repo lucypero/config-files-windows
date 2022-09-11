@@ -5,9 +5,11 @@
 	],
 	"installed_packages":
 	[
+		"Function Name Display",
 		"GDScript (Godot Engine)",
 		"LSP",
 		"LSP-pylsp",
+		"LSP-pyright",
 		"Materialize",
 		"NeoVintageous",
 		"One Dark Material - Theme",
@@ -15,5 +17,6 @@
 		"Package Control",
 		"Theme - Interstellar",
 		"Theme - Spacegray",
+		"TOML",
 	],
 }

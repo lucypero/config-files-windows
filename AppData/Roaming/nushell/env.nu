@@ -4,7 +4,7 @@ def create_left_prompt [] {
     let path_segment = if (is-admin) {
         $"(ansi red_bold)($env.PWD)"
     } else {
-        $"(ansi -e { fg: '#ffbdf6'})($env.PWD)"
+        $"(ansi -e { fg: '#ffbdf6'})($env.PWD | str replace $nu.home-path '~' -s)"
     }
 
     $path_segment
