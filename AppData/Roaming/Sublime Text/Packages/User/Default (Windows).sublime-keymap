@@ -61,4 +61,12 @@
   },
   { "keys": ["ctrl+]"], "command": "next_result" },
   { "keys": ["ctrl+["], "command": "prev_result" },
+  { "keys": ["ctrl+s"], "command": "save", "args": { "async": true } },
+  // TODO snippet
+  {
+        "keys": ["ctrl+t"],
+        "command": "insert_snippet",
+        "args": {"contents": "@TODO(lucypero): "},
+        "context": [{"key": "vi_insert_mode_aware"}]
+  }
 ]

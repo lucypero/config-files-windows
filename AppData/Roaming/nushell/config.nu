@@ -2,7 +2,7 @@
 
 alias e = subl
 alias f = cd (open --raw ~\docs\bookmarks | fzf)
-alias ba = (echo $env.PWD | save ~\docs\bookmarks --append)
+alias ba = (echo $"($env.PWD)\n" | save ~\docs\bookmarks --append)
 alias c = cargo
 
 alias gc = cd $"($env.PREX_PATH)\\cipher"

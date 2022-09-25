@@ -1,0 +1,18 @@
+{
+    "cmd": ["cargo", "build"],
+    "selector": "source.rust",
+    "keyfiles": ["Cargo.toml"],
+    "working_dir": "$folder",
+    "syntax": "MyCargo.sublime-syntax",
+    "file_regex": "(?|, ([^,<\n]*\\.[A-z]{2}):([0-9]+)|[ \t]*-->[ \t]*([^<\n]*):([0-9]+):([0-9]+))",
+    "variants": [
+        {
+            "name": "Run",
+            "cmd": ["cargo", "run"]
+        },
+        {
+            "name": "Test",
+            "cmd": ["cargo", "test"]
+        },
+    ]
+}

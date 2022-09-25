@@ -15,6 +15,7 @@
 	"neovintageous_build_version": 11100,
 	"vintageous_use_sys_clipboard": true,
 	"vintageous_reset_mode_when_switching_tabs": false,
+	"vintageous_enable_sneak": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"use_tab_stops": false,
@@ -23,4 +24,6 @@
 	"theme": "auto",
 	"font_options": ["no_italic"],
 	"sublime_merge_path": "~\\scoop\\apps\\sublime-merge\\current\\sublime_merge.exe",
+	"auto_complete_cycle": true,
+	"drag_text": false,
 }

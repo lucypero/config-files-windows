@@ -16,6 +16,10 @@ nnoremap <leader>] :NextResult<cr>
 nnoremap <leader>w :FocusNeighboringGroup<cr>
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>P :PromptSelectWorkspace<cr>
+nnoremap <leader>z :ToggleZoomPane<cr>
+
+" imaps don't work. for that, do it on vanilla sublime keybinds with that special context.
+" inoremap <C-t> :vsplit<cr>
 
 " LSP stuff
 nnoremap <leader>e :ShowOverlay overlay=goto text=@<CR>
@@ -26,4 +30,5 @@ nnoremap <leader>f :LspFormatDocument<cr>
 nnoremap <leader>a :LspCodeActions<cr>
 nnoremap <leader>k :LspHover<cr>
 nnoremap gd :LspSymbolDefinition<cr>
+nnoremap gt :LspSymbolTypeDefinition<cr>
 nnoremap gr :LspSymbolReferences<cr>
