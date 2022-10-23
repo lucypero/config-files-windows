@@ -4,6 +4,9 @@
 		"rust-analyzer":
 		{
 			"enabled": true,
+			"settings": {
+				"rust-analyzer.checkOnSave.enable": false
+			},
 		},
 		"gdscript":
 		{
@@ -15,4 +18,12 @@
 	},
 	"show_diagnostics_panel_on_save": 0,
   "show_diagnostics_count_in_view_status": true,
+  "inhibit_snippet_completions": true,
+  "inhibit_word_completions": true,
+  "diagnostics_highlight_style": {
+    "error": "squiggly",
+    "warning": "",
+    "info": "",
+    "hint": ""
+  },
 }

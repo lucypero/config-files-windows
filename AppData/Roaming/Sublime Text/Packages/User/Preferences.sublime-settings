@@ -2,7 +2,7 @@
 // and are overridden in turn by syntax-specific settings.
 {
 	"font_face": "JetBrains Mono",
-	"font_size": 10,
+	"font_size": 11,
 	"ignored_packages": ["Six",
 		"Vintage",
 		"Vintageous",
@@ -12,7 +12,7 @@
 	"vintage_start_in_command_mode": true,
 	"hardware_acceleration": "opengl",
 	"color_scheme": "Mariana.sublime-color-scheme",
-	"neovintageous_build_version": 11100,
+	"neovintageous_build_version": 12700,
 	"vintageous_use_sys_clipboard": true,
 	"vintageous_reset_mode_when_switching_tabs": false,
 	"vintageous_enable_sneak": true,
@@ -26,4 +26,7 @@
 	"sublime_merge_path": "~\\scoop\\apps\\sublime-merge\\current\\sublime_merge.exe",
 	"auto_complete_cycle": true,
 	"drag_text": false,
+	"vintageous_handle_keys": {
+		"<C-N>": false,
+	},
 }

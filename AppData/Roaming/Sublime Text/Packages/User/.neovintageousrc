@@ -13,7 +13,15 @@ vnoremap ; :
 nnoremap <leader>[ :PrevResult<cr>
 nnoremap <leader>] :NextResult<cr>
 
+nnoremap <tab> :Reindent<cr>
+vnoremap <tab> :Reindent<cr>
+
+" groups
+
 nnoremap <leader>w :FocusNeighboringGroup<cr>
+nnoremap <c-w> :FocusNeighboringGroup<cr>
+nnoremap <c-e> :MoveToNeighboringGroup<cr>
+
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>P :PromptSelectWorkspace<cr>
 nnoremap <leader>z :ToggleZoomPane<cr>
