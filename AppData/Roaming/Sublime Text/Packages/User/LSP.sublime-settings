@@ -5,7 +5,7 @@
 		{
 			"enabled": true,
 			"settings": {
-				"rust-analyzer.checkOnSave.enable": false
+				"rust-analyzer.checkOnSave.enable": false,
 			},
 		},
 		"gdscript":
@@ -24,6 +24,11 @@
     "error": "squiggly",
     "warning": "",
     "info": "",
-    "hint": ""
+    "hint": "",
   },
+
+  "diagnostics_delay_ms": 2000,
+  "diagnostics_additional_delay_auto_complete_ms": 2000,
+
+  "show_diagnostics_severity_level": 1,
 }

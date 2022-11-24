@@ -1,11 +1,16 @@
-set clipboard+=unnamed
 set visualbell
 set noerrorbells
 set ignorecase
 set smartcase
 set scrolloff=10
+set relativenumber
+set number
+set clipboard+=unnamed
 let mapleader = " "
 nn <leader>w <C-w><C-w>
+nn <C-w> <C-w><C-w>
+nmap <C-s> <action>(SaveDocument)
+nmap <C-q> <action>(CloseContent)
 nn <leader>S :wa <cr>
 nn <leader>1 <C-^>
 nn <leader><F3> :e ~\.ideavimrc<CR>
@@ -21,7 +26,7 @@ nn <leader>v <c-w>v
 nmap gr <action>(ShowUsages)
 nmap <leader>k <action>(QuickJavaDoc)
 nmap <leader>] <action>(GotoNextError)
-nmap <leader>o <action>(GotoFile)
+nmap <C-p> <action>(GotoFile)
 nmap <leader>s <action>(FileStructurePopup)
 nmap <leader>S <action>(GotoSymbol)
 nmap <leader>f <action>(ReformatCode)

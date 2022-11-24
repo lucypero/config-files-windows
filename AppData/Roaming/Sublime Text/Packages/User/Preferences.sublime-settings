@@ -2,7 +2,7 @@
 // and are overridden in turn by syntax-specific settings.
 {
 	"font_face": "JetBrains Mono",
-	"font_size": 11,
+	"font_size": 12,
 	"ignored_packages": ["Six",
 		"Vintage",
 		"Vintageous",
@@ -16,7 +16,7 @@
 	"vintageous_use_sys_clipboard": true,
 	"vintageous_reset_mode_when_switching_tabs": false,
 	"vintageous_enable_sneak": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"use_tab_stops": false,
 	"scroll_context_lines": 8,
@@ -29,4 +29,5 @@
 	"vintageous_handle_keys": {
 		"<C-N>": false,
 	},
+	"auto_complete_include_snippets": false,
 }

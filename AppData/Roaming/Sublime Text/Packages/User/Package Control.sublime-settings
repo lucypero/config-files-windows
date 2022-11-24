@@ -6,11 +6,9 @@
 	"installed_packages":
 	[
 		"Function Name Display",
-		"GDScript (Godot Engine)",
 		"LSP",
-		"LSP-pylsp",
 		"NeoVintageous",
-		"Package Control",
 		"TOML",
+		"Package Control",
 	],
 }

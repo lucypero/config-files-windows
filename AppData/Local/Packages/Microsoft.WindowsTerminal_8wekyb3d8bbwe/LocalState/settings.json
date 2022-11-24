@@ -4,14 +4,6 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "ctrl+shift+k"
-        },
-        {
             "command": "unbound",
             "keys": "ctrl+v"
         },
@@ -32,6 +24,18 @@
             "keys": "alt+up"
         },
         {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
@@ -46,14 +50,18 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
+                "action": "moveFocus",
+                "direction": "up"
             },
-            "keys": "ctrl+c"
+            "keys": "ctrl+shift+k"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+shift+v"
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+shift+j"
         },
         {
             "command": 
@@ -71,14 +79,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "ctrl+shift+j"
         }
     ],
     "copyFormatting": "none",
@@ -94,7 +94,7 @@
             "cursorShape": "filledBox",
             "font": 
             {
-                "face": "JetBrains Mono",
+                "face": "Cascadia Code",
                 "size": 11,
                 "weight": "medium"
             }
@@ -136,6 +136,18 @@
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
+            },
+            {
+                "guid": "{a32ecad0-ae8f-5b26-b832-5af5f403e0d7}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{3ef6f6b3-706e-5211-8d2f-05579ca92dfa}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
