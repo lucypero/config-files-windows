@@ -15,6 +15,10 @@
 			"tcp_port": 6008, 
 			"selector": "source.gdscript",
 		},
+		"clangd":
+		{
+			"enabled": false,
+		},
 	},
 	"show_diagnostics_panel_on_save": 0,
   "show_diagnostics_count_in_view_status": true,
